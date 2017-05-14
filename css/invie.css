@@ -32,6 +32,13 @@ body {
     margin-left: 30px;
 }
 
+.menu li:before {
+    content: '∘';
+    font-size: 25px;
+    line-height: 20px;
+    color: blue;
+}
+
 .titulo {
     font-family: 'Montserrat', sans-serif;
     font-size: 70px;
