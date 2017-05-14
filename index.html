@@ -67,7 +67,39 @@
                 <a href="tel:+584120388544"><strong>Teléfono</strong> <span>04120388544</span></a>
                 <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
             </div>
-            <div class="formulario"></div>
+            <form class="formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" required id="nombre" name="nombre" />
+                <label for="email">E-mail</label>
+                <input type="email" required id="email" name="email" />
+                <div class="sexo">
+                    <label for="mujer">
+                        <input type="radio" id="mujer" name="sexo" value="mujer"> mujer
+                    </label>
+                    <label for="hombre">
+                        <input type="radio" id="hombre" name="sexo" value="hombre"> hombre
+                    </label>
+                </div>
+                <div class="intereses">
+                    <label for="cotizacion">
+                        <input type="checkbox" name="intereses" id="cotizacion" value="cotizacion"> Cotización
+                    </label>
+                    <label for="reclamos">
+                        <input type="checkbox" name="intereses" id="reclamos" value="reclamos"> Reclamos
+                    </label>
+                    <label for="comentarios">
+                        <input type="checkbox" name="intereses" id="comentarios" value="comentarios"> Comentarios
+                    </label>
+                    <label for="otros">
+                        <input type="checkbox" name="intereses" id="otros" value="otros"> Otros
+                    </label>
+                </div>
+                <div>
+                    <label for="comentarios">Comentarios</label>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="7"></textarea>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
         </div> 
     </footer>
 </body>
