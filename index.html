@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/invie.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" media="(max-width: 800px)" type="text/css" href="css/media-query.css"> -->
 
 </head>
@@ -110,9 +111,11 @@
         var burguerButton = document.getElementById("burguer-button");
         var menu = document.getElementById("menu");
 
-        burguerButton.addEventListener("touchstart", function() {
+        function toggleMenu() {
             menu.classList.toggle("active");
-        });
+        }
+
+        burguerButton.addEventListener("touchstart", toggleMenu);
 
     </script>
 </body>
