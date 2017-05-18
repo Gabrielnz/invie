@@ -325,11 +325,24 @@ input:focus, textarea:focus {
   position: absolute;
   left: 20px;
   top: 20px;
+  color: white;
   z-index: 3;
 }
 
 /*query para adaptar el sitio a tablets*/
 @media screen and (max-width: 800px) {
+
+  /*precios*/
+  .tabla {
+    margin: 50px 20px;
+  }
+
+  .tabla .contenedor {
+    overflow: auto;
+    border: 1px solid #273b47;
+  }
+  /*precios*/
+
   /*portada*/
   .titulo {
     font-size: 45px;
@@ -429,10 +442,6 @@ input:focus, textarea:focus {
 /*query para adaptar el sitio a telefonos*/
 @media screen and (max-width: 650px) {
 
-  .burguer-button {
-    display: inline-block;
-  }
-
   .header {
     text-align: center;
   }
@@ -460,6 +469,14 @@ input:focus, textarea:focus {
   /*portada*/
   .portada .contenedor {
     position: static;
+  }
+
+  .header, .header .contenedor {
+    position: static;
+  }
+
+  .burguer-button {
+    display: inline-block;
   }
 
   .menu {
