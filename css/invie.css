@@ -154,8 +154,6 @@ input:focus, textarea:focus {
   font-size: 35px;
 }
 
-
-
 .portada {
 
   color: white;
@@ -416,18 +414,31 @@ input:focus, textarea:focus {
 /*cuando la pantalla sea mas pequena que la de un ipad (tablet mas usada)*/
 @media screen and (max-width: 767px) {
   /*footer*/
-  .footer .contenedor{
+  .footer .contenedor {
     display: block;
   }
 
   .contacto {
     margin: 0 auto;
+    display: block;
+  }
+
+  .contacto a {
+    display: block;
   }
 
   .formulario {
     display: block;
     margin: 0 auto;
     width: 300px;
+  }
+
+  .formulario label {
+    font-size: 20px;
+  }
+
+  .sexo label {
+    display: block;
   }
 
   .intereses label {
@@ -439,9 +450,13 @@ input:focus, textarea:focus {
     margin: 0;
   }
 
+  input[type="text"]{
+    margin-bottom: 30px;
+  }
+
   input[type="text"],
   input[type="email"] {
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px;
   }
 
