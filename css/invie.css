@@ -322,11 +322,23 @@ input:focus, textarea:focus {
   display: none;
   text-align: center;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 20px;
   color: white;
   z-index: 3;
+}
+
+.video-demo {
+  max-width: 500px;
+  width: 100%;
+  border: 5px solid #3c5b6e;
+}
+
+.video-demo-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 /*query para adaptar el sitio a tablets*/
@@ -364,6 +376,11 @@ input:focus, textarea:focus {
   /*portada*/
 
   /*guitarras*/
+
+  .video-demo-contenedor {
+    margin-bottom: 30px;
+  }
+
   .guitarras {
     text-align: center;
   }
@@ -467,6 +484,15 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 500px) {
   /*portada*/
+
+  .portada .button {
+    display: block;
+  }
+
+  .precios .header .logotipo {
+    margin: 50px 0;
+  }
+
   .portada .contenedor {
     position: static;
   }
@@ -481,7 +507,7 @@ input:focus, textarea:focus {
 
   .menu {
     background: rgba(255, 60, 88, .8);
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     z-index: 2;
@@ -538,7 +564,17 @@ input:focus, textarea:focus {
   .title-b {
     font-size: 30px;
   }
+
+  .video-demo-contenedor {
+    margin: 0 10px 30px 10px;
+  }
   /*guitarras*/
+
+  /* formulario */
+  .col2 {
+    align-items: stretch;
+  }
+  /* formulario */
 }
 
 .video-responsive-contenedor {
