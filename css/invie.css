@@ -123,11 +123,25 @@ input:focus, textarea:focus {
 
 }
 
+.b-lazy {
+  /*-webkit-transition: opacity 1s ease-in-out;*/
+  /*-moz-transition: opacity 1s ease-in-out;*/
+  /*-o-transition: opacity 1s ease-in-out;*/
+  transition: 1s;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.b-lazy.b-loaded {
+ opacity: 1;
+}
+
 .titulo {
   font-family: 'Montserrat', sans-serif;
   font-size: 70px;
   margin-bottom: 0;
   margin-top: 70px;
+  transition: .3s;
 }
 
 .titulo span {
@@ -137,11 +151,14 @@ input:focus, textarea:focus {
 .title-a {
   font-size: 24px;
   margin-top: 0;
+  transition: .3s;
 }
 
 .title-b {
   font-size: 50px;
   margin-bottom: 20px;
+  transition: .3s;
+
 }
 
 .guitarras {
