@@ -1,0 +1,24 @@
+{
+  "name": "invie",
+  "version": "1.0.0",
+  "description": "Las guitarras más locas.",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "2.18.12",
+    "gulp": "3.9.1",
+    "gulp-postcss": "7.0.0"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielnz/invie.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Nunez <gabriel.nzn@gmail.com> (https://github.com/gabrielnz)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielnz/invie/issues"
+  },
+  "homepage": "https://github.com/Gabrielnz/invie#readme"
+}
