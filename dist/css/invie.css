@@ -1,8 +1,14 @@
-body {
-  border: 10px solid blue;
+.InvieHero {
+  padding: 20px;
+  height: 500px;
 }
 
-.clasteTest {
-  display: -webkit-box;
-  display: flex;
-}
+  .InvieHero-header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
