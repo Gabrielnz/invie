@@ -23,6 +23,16 @@
             justify-content: space-between;
   }
 
+.InvieHero-logo {
+  	transition: all 0.3s ease-in;
+  }
+
+.InvieHero-logo:hover {
+  		filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
+  		-webkit-filter: blur(4px);
+  		        filter: blur(4px);
+  	}
+
 .InvieHero-copy-title {
   		font-size: 54px;
   	}
