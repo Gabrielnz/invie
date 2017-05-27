@@ -16,6 +16,14 @@ gulp.task('serve', function () {
   })
 })
 
+// Tarea para el archivo JavaScript
+gulp.task('js', function () {
+
+  return gulp.src('./src/invie.js')
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.stream())
+})
+
 // Tarea para post-procesar el CSS y sincroniza el navegador
 gulp.task('css', function () {
 
@@ -39,6 +47,7 @@ gulp.task('css', function () {
 // Tarea para vigilar los cambios que ocurran en el CSS y el HTML
 gulp.task('watch', function () {
   gulp.watch('./src/*.css', ['css'])
+  gulp.watch('./src/invie.js', ['js'])
   gulp.watch('./dist/*.html').on('change', browserSync.reload)
 })
 
