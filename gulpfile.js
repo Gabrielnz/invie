@@ -3,6 +3,7 @@ var postcss = require('gulp-postcss')
 var cssnext = require('postcss-cssnext')
 // var autoprefixer = require('autoprefixer')
 var cssnested = require('postcss-nested')
+var mixins = require('postcss-mixins')
 var browserSync = require('browser-sync').create()
 
 // Servidor de desarrollo
@@ -22,6 +23,7 @@ gulp.task('css', function () {
   // y de internet explorer 8 en adelante
   var processors = [
     // autoprefixer({ browsers: ['> 5%', 'ie 8'] }),
+    mixins(),
     cssnested,
     cssnext({ browsers: ['> 5%', 'ie 8'] })
   ]
