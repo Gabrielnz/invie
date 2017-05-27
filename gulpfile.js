@@ -5,6 +5,7 @@ var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var mixins = require('postcss-mixins')
 var browserSync = require('browser-sync').create()
+var atImport = require('postcss-import')
 
 // Servidor de desarrollo
 gulp.task('serve', function () {
@@ -23,12 +24,13 @@ gulp.task('css', function () {
   // y de internet explorer 8 en adelante
   var processors = [
     // autoprefixer({ browsers: ['> 5%', 'ie 8'] }),
+    atImport(),
     mixins(),
     cssnested,
     cssnext({ browsers: ['> 5%', 'ie 8'] })
   ]
 
-  return gulp.src('./src/*.css')
+  return gulp.src('./src/invie.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream())
