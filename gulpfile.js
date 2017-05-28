@@ -38,11 +38,11 @@ gulp.task('css', function () {
     // autoprefixer({ browsers: ['> 5%', 'ie 8'] }),
     atImport(),
     mixins(),
-    cssnested,
+    cssnested(),
     lost(),
     rucksack(),
     cssnext({ browsers: ['> 5%', 'ie 8'] }),
-    mqpacker,
+    mqpacker(),
     csswring()
   ]
 
