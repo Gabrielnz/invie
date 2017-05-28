@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
+var rucksack = require('rucksack-css')
 var cssnext = require('postcss-cssnext')
 // var autoprefixer = require('autoprefixer')
 var cssnested = require('postcss-nested')
@@ -38,6 +39,7 @@ gulp.task('css', function () {
     mixins(),
     cssnested,
     lost(),
+    rucksack(),
     cssnext({ browsers: ['> 5%', 'ie 8'] }),
     csswring()
   ]
