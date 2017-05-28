@@ -33,14 +33,12 @@
             </div>
         </section>
 
-        <section class="InviGuitars u-wrapper" id="guitarras"> <!-- guitarras -->
-            <h2 class="InviGuitars-title u-wrapper">Nuestras guitarras</h2> <!-- titulo -->
+        <section class="InvieGuitars u-wrapper" id="guitarras"> <!-- guitarras -->
+            <h2 class="InvieGuitars-title">Nuestras guitarras</h2> <!-- titulo -->
 
-            <div class="u-scrollContainer u-wrapper">
-                <article class="u-scrollContainer-itemContainer"> <!-- guitarra 1 -->
-                    <div class="u-scrollContainer-itemContent">
-                        <img class="InvieGuitars-item-img b-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" data-src="images/invie-acustica.png|images/invie-acustica2x.png" width="350" alt="Guitarra Invie Acústica" />
-                        <div class="InvieGuitars-item-container">
+                <article class="InvieGuitars-item"> <!-- guitarra 1 -->
+                        <img class="InvieGuitars-item-img--right b-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" data-src="images/invie-acustica.png|images/invie-acustica2x.png" width="350" alt="Guitarra Invie Acústica" />
+                        <div class="InvieGuitars-item-container--a">
                             <h3 class="InvieGuitars-item-title">Invie Acústica</h3>
                             <ol class="InvieGuitars-item-list">
                                 <li>Estilo vintage</li>
@@ -48,12 +46,10 @@
                                 <li>Incluye estuche invisible de aluminio</li>
                             </ol>
                         </div>
-                    </div>
                 </article>
-                <article class="u-scrollContainer-itemContainer"> <!-- guitarra 2 -->
-                    <div class="u-scrollContainer-itemContent">
-                        <img class="InvieGuitars-item-img b-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" data-src="images/invie-classic.png|images/invie-classic2x.png" width="350" alt="Guitarra Invie Classic" />
-                        <div class="InvieGuitars-item-container">
+                <article class="InvieGuitars-item b"> <!-- guitarra 2 -->
+                        <img class="InvieGuitars-item-img--left b-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" data-src="images/invie-classic.png|images/invie-classic2x.png" width="350" alt="Guitarra Invie Classic" />
+                        <div class="InvieGuitars-item-container--b">
                             <h3 class="InvieGuitars-item-title">Invie Classic</h3>
                             <ol class="InvieGuitars-item-list">
                                 <li>Estilo vintage</li>
@@ -61,18 +57,9 @@
                                 <li>Inicia tu camino como Rockstar</li>
                             </ol>
                         </div>
-                    </div>
-                </article>
-            </div>
-            
+                </article>  
         </section>
-        <div class="u-Grid">
-            <div class="u-Grid-column"><p>Col 1</p></div>
-            <div class="u-Grid-column"><p>Col 2</p></div>
-            <div class="u-Grid-column"><p>Col 3</p></div>
-            <div class="u-Grid-column"><p>Col 4</p></div>
-            <div class="u-Grid-column"><p>Col 5</p></div>
-        </div>
+
         <footer class="InvieFooter">
             <div class="InvieFooter-container u-wrapper">
                 <div class="InvieFooter-contact">
@@ -81,12 +68,12 @@
                     <a class="InvieFooter-link" href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span></a>
                 </div>
                 <form class="InvieFooter-form">
-                    <div class="InvieFooter-form-column">
+                    <div class="InvieFooter-form-column--1">
                         <label for="nombre">Nombre</label>
                         <input class="InvieFooter-form-input InvieFooter-form-input--text" type="text" required id="nombre" name="nombre" />
                         <label for="email">E-mail</label>
                         <input class="InvieFooter-form-input InvieFooter-form-input--text" type="email" required id="email" name="email" />
-                        <div class="sexo">
+                        <div class="InvieFooter-form-sex">
                             <label class="InvieFooter-form-label" for="mujer">
                                 <input class="InvieFooter-form-input InvieFooter-form-input--radio" type="radio" id="mujer" checked name="sexo" value="mujer"> mujer
                             </label>
@@ -94,7 +81,7 @@
                                 <input class="InvieFooter-form-input InvieFooter-form-input--radio" type="radio" id="hombre" name="sexo" value="hombre"> hombre
                             </label>
                         </div>
-                        <div class="intereses">
+                        <div class="InvieFooter-form-interests">
                             <label class="InvieFooter-form-label" for="cotizacion">
                                 <input class="InvieFooter-form-input InvieFooter-form-input--check" type="checkbox" checked name="intereses" id="cotizacion" value="cotizacion"> Cotización
                             </label>
@@ -110,7 +97,7 @@
                         </div>
                     </div>
                     
-                    <div class="InvieFooter-form-column">
+                    <div class="InvieFooter-form-column--2">
                         <label class="InvieFooter-form-label" for="comentarios">Comentarios</label>
                         <textarea class="InvieFooter-form-input InvieFooter-form-input--textarea" name="comentarios" id="comentarios" cols="30" rows="7"></textarea>
                         <input class="InvieFooter-form-btn" type="submit" value="Enviar" />

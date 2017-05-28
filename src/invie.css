@@ -6,7 +6,8 @@
 /*Custom media queries*/
 @custom-media --mobile (max-width: 500px);
 @custom-media --tablet (max-width: 650px);
-@custom-media --desktop (max-width: 800px);
+@custom-media --mid-tablet (max-width: 767px);
+@custom-media --big-tablet (max-width: 800px);
 @custom-media --retina (-webkit-min-device-pixel-ratio: 2);
 
 /*Mixins*/
@@ -22,33 +23,19 @@
   background: linear-gradient(to left, $(bgColorStart), $(bgColorEnd));
 }
 
-.u-scrollContainer {
-  width: 100%;
-  overflow: auto;
-  white-space: nowrap;
-  margin-bottom: 20px;
-  scroll-snap-points-x: repeat(100%);
-  scroll-snap-type: mandatory;
-  font-size: 0;
+body {
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+}
 
-  &-itemContainer {
-    border: 1px solid var(--border-feature);
-    border-radius: 12px;
-    width: 98%;
-    margin: 1%;
-    display: inline-block;
-    line-height: 18px;
-    font-size: 18px;
-  }
+.b-lazy {
+  transition: 1s;
+  max-width: 100%;
+  opacity: 0;
+}
 
-  &-itemContent {
-    display: flex;
-
-    & > img {
-      width: auto;
-      height: 200px;
-    }
-  }
+.b-lazy.b-loaded {
+ opacity: 1;
 }
 
 .u-Grid {
@@ -78,12 +65,9 @@
 
 .InvieHero {
   background: url('../images/background.png') var(--bg-header);
+  background-size: cover;
   padding: 20px;
   height: 500px;
-
-  @media (--retina) {
-  	background-image: url('../images/background2x.png');
-  }
 
   &-header {
     display: flex;
@@ -92,32 +76,279 @@
   }
 
   &-logo {
-  	transition: all 0.3s ease-in;
-  	&:hover {
-  		filter: blur(4px);
-  	}
+    display: inline-block;
+    margin-left: 0;
+    transition: all 0.3s ease-in;
+    
+    &:hover {
+      filter: blur(4px);
+    }
   }
 
+  &-btn {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #395667;
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    color: white;
+    z-index: 3;
+  }
+
+  &-navbar {
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  &-menu {
+
+    &-item {
+      display: inline-block;
+      margin-left: 30px;
+
+      &:before {
+        content: '∘';
+        font-size: 25px;
+        line-height: 20px;
+        color: white;
+      }
+
+      & > a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
 
   &-copy {
-  	&-title {
-      color: var(--bg-body);
-  		font-size: responsive 32px 70px;
-  	}
 
-  	&-btn {
-  		@mixin btn var(--bg-body), var(--btn-gradient), var(--btn-gradient-start), var(--btn-gradient-end);
-  	}
+    &-title {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--bg-body);
+      font-size: 70px;
+      margin-bottom: 0;
+      margin-top: 70px;
+      transition: .3s;
+
+      & > span {
+        text-decoration: underline;
+      }
+
+      @media (--big-tablet) {
+        font-size: 45px;
+        margin-top: 30px;
+      }
+    }
+
+    &-subtitle {
+      color: var(--bg-body);
+      font-size: 24px;
+      margin-top: 0;
+      transition: .3s;
+
+      @media (--big-tablet) {
+        font-size: 18px;
+      }
+    }
+
+    &-btn {
+      @mixin btn var(--bg-body), var(--btn-gradient), var(--btn-gradient-start), var(--btn-gradient-end);
+      margin-bottom: 70px;
+
+      @media (--big-tablet) {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (--big-tablet) {
+    height: auto;
+  }
+
+  @media (--retina) {
+  	background-image: url('../images/background2x.png');
+  }
+}
+
+.InvieGuitars {
+
+  color: var(--bg-guitars);
+  margin-bottom: 60px;
+
+  &-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(var(--fontSize) * 2);
+  }
+
+  &-item {
+
+    margin: 10px 10px 40px 10px;
+    padding: 10px;
+    /*overflow: hidden;*/
+    border: 1px solid #1F313C;
+    border-radius: 8px;
+
+    &.b {
+      height: 190px;
+
+      @media (--big-tablet) {
+        height: auto;
+      }
+    }
+
+    &-img {
+
+      &--left {
+        float: left;
+        position: relative;
+      }
+
+      &--right {
+        float: right;
+        position: relative;
+        top: -127px;
+      }
+
+      @media (--big-tablet) {
+        float: none;
+        position: static;
+      }
+    }
+
+    &-container {
+
+      &--a {
+        padding-left: 20px;
+
+        @media (--big-tablet) {
+          padding: 0;
+        }
+      }
+
+      &--b {
+        margin-left: 370px;
+        position: relative;
+        bottom: 90px;
+
+        @media (--big-tablet) {
+          position: static;
+          margin: 0;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 50px;
+      margin-bottom: 20px;
+      transition: .3s;
+
+      @media (--big-tablet) {
+        margin: 0;
+      }
+    }
+
+    &-list {
+      padding: 0;
+
+      @media (--big-tablet) {
+
+        & > li {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  @media (--big-tablet) {
+    text-align: center;
   }
 }
 
 .InvieFooter {
 	background-color: var(--bg-footer);
+  padding: 50px 10px;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-contact {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-logo {
+    display: block;
+  }
+
+  &-link {
+    color: white;
+    text-decoration: none;
+    margin: 10px 10px 10px 0;
+    
+    & > strong {
+      display: block;
+    }
+  }
 
   &-form {
+    display: flex;
+    width: 400px;
+    color: white;
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+
+      &--1 {
+        margin-right: 15px;
+      }
+
+      &--2 {
+        align-items: flex-start;
+      }
+    }
+
+    &-label {
+      margin-bottom: 10px;
+    }
+
+    &-sex {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &-interests {
+      margin-bottom: 10px;
+
+      & > label {
+        font-size: 12px;
+      }
+    }
+
+    &-input {
+      outline: 0;
+
+      &:focus {
+        background: lightgray;
+      }
+    }
 
     &-btn {
       @mixin btn var(--bg-body), var(--btn-gradient), var(--btn-gradient-start), var(--btn-gradient-end);
+      margin-top: 15px;
     }
   }
 }
