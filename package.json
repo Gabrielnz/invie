@@ -8,6 +8,7 @@
     "browser-sync": "2.18.12",
     "gulp": "3.9.1",
     "gulp-postcss": "7.0.0",
+    "lost": "8.0.0",
     "postcss-cssnext": "2.11.0",
     "postcss-import": "10.0.0",
     "postcss-mixins": "6.0.0",
