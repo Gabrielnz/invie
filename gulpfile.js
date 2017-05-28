@@ -7,6 +7,7 @@ var mixins = require('postcss-mixins')
 var browserSync = require('browser-sync').create()
 var atImport = require('postcss-import')
 var lost = require('lost')
+var csswring = require('csswring')
 
 // Servidor de desarrollo
 gulp.task('serve', function () {
@@ -37,7 +38,8 @@ gulp.task('css', function () {
     mixins(),
     cssnested,
     lost(),
-    cssnext({ browsers: ['> 5%', 'ie 8'] })
+    cssnext({ browsers: ['> 5%', 'ie 8'] }),
+    csswring()
   ]
 
   return gulp.src('./src/invie.css')
