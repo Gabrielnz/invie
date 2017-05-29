@@ -101,13 +101,7 @@ body {
   height: 500px;
 }
 .InvieHero-header {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-            justify-content: space-between;
+    position: relative;
   }
 .InvieHero-logo {
     display: inline-block;
@@ -332,6 +326,22 @@ body {
 .u-Grid-column:nth-child(3n) {
         margin-right: 0;
         margin-left: auto
+  }
+.InvieHero-header {
+      text-align: center
+  }
+.InvieHero-logo {
+      margin: 0
+  }
+.InvieHero-navbar {
+      position: static;
+      display: block
+  }
+.InvieHero-menu-item:first-child {
+          margin: 0
+      }
+.InvieHero-menu {
+      padding: 0
   }
     }
 @media (max-width: 500px) {
