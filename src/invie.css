@@ -210,17 +210,22 @@ body {
       &--left {
         float: left;
         position: relative;
+
+        @media (--big-tablet) {
+          float: none;
+          position: static;
+        }
       }
 
       &--right {
         float: right;
         position: relative;
         top: -127px;
-      }
 
-      @media (--big-tablet) {
-        float: none;
-        position: static;
+        @media (--big-tablet) {
+          float: none;
+          position: static;
+        }
       }
     }
 
