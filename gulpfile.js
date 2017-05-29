@@ -28,14 +28,6 @@ gulp.task('js', function () {
     .pipe(browserSync.stream())
 })
 
-// Tarea para el HTML
-gulp.task('html', function () {
-
-  return gulp.src('./src/index.html')
-    .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream())
-})
-
 // Tarea para post-procesar el CSS y sincroniza el navegador
 gulp.task('css', function () {
 
@@ -63,7 +55,6 @@ gulp.task('css', function () {
 gulp.task('watch', function () {
   gulp.watch('./src/*.css', ['css'])
   gulp.watch('./src/invie.js', ['js'])
-  gulp.watch('./src/index.html', ['html'])
   gulp.watch('./dist/*.html').on('change', browserSync.reload)
 })
 

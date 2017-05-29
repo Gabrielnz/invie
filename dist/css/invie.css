@@ -263,20 +263,23 @@ body {
     width: 400px;
     color: white;
   }
-.InvieFooter-form-column {
+.InvieFooter-form-col1 {
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
               flex-direction: column;
+      margin-right: 15px;
     }
-.InvieFooter-form-column--1 {
-        margin-right: 15px;
-      }
-.InvieFooter-form-column--2 {
-        -webkit-box-align: start;
-                align-items: flex-start;
-      }
+.InvieFooter-form-col2 {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-align: start;
+              align-items: flex-start;
+    }
 .InvieFooter-form-label {
       margin-bottom: 10px;
     }
@@ -295,6 +298,9 @@ body {
     }
 .InvieFooter-form-input:focus {
         background: lightgray;
+      }
+.InvieFooter-form-input--textarea {
+        width: 100%;
       }
 .InvieFooter-form-btn {
       text-decoration: none;
@@ -397,3 +403,43 @@ body {
   	background-image: url('../images/background2x.png')
 }
   }
+@media (max-width: 767px) {
+.InvieFooter-container {
+      display: block
+  }
+.InvieFooter-contact {
+      margin: 0 auto;
+      display: block
+  }
+.InvieFooter-link {
+      display: block
+  }
+.InvieFooter-form-col1 {
+        margin: 0
+    }
+.InvieFooter-form-label {
+        font-size: 20px
+    }
+.InvieFooter-form-sex > label {
+          display: block
+      }
+.InvieFooter-form-interests > label {
+          display: block;
+          font-size: 16px
+      }
+.InvieFooter-form-input[type="text"] {
+          margin-bottom: 30px
+      }
+.InvieFooter-form-input[type="text"], .InvieFooter-form-input[type="email"] {
+          font-size: 20px;
+          padding: 5px
+      }
+.InvieFooter-form-input[type="radio"], .InvieFooter-form-input[type="checkbox"] {
+          zoom: 1.5
+      }
+.InvieFooter-form {
+      display: block;
+      margin: 0 auto;
+      width: 300px
+  }
+    }

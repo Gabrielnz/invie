@@ -285,6 +285,10 @@ body {
   &-container {
     display: flex;
     justify-content: space-between;
+
+    @media (--mid-tablet) {
+      display: block;
+    }
   }
 
   &-contact {
@@ -292,6 +296,11 @@ body {
     width: 300px;
     flex-wrap: wrap;
     align-items: center;
+
+    @media (--mid-tablet) {
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   &-logo {
@@ -306,6 +315,10 @@ body {
     & > strong {
       display: block;
     }
+
+    @media (--mid-tablet) {
+      display: block;
+    }
   }
 
   &-form {
@@ -313,26 +326,40 @@ body {
     width: 400px;
     color: white;
 
-    &-column {
+    &-col1 {
       display: flex;
       flex-direction: column;
+      margin-right: 15px;
 
-      &--1 {
-        margin-right: 15px;
+      @media (--mid-tablet) {
+        margin: 0;
       }
+    }
 
-      &--2 {
-        align-items: flex-start;
-      }
+    &-col2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &-label {
       margin-bottom: 10px;
+      
+      @media (--mid-tablet) {
+        font-size: 20px;
+      }
     }
 
     &-sex {
       margin-top: 10px;
       margin-bottom: 10px;
+
+      & > label {
+
+        @media (--mid-tablet) {
+          display: block;
+        }
+      }
     }
 
     &-interests {
@@ -340,6 +367,11 @@ body {
 
       & > label {
         font-size: 12px;
+
+        @media (--mid-tablet) {
+          display: block;
+          font-size: 16px;
+        }
       }
     }
 
@@ -349,11 +381,43 @@ body {
       &:focus {
         background: lightgray;
       }
+
+      &[type="text"] {
+
+        @media (--mid-tablet) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &[type="text"], &[type="email"] {
+
+        @media (--mid-tablet) {
+          font-size: 20px;
+          padding: 5px;
+        }
+      }
+
+      &[type="radio"], &[type="checkbox"] {
+
+        @media (--mid-tablet) {
+          zoom: 1.5;
+        }
+      }
+
+      &--textarea {
+        width: 100%;
+      }
     }
 
     &-btn {
       @mixin btn var(--bg-body), var(--btn-gradient), var(--btn-gradient-start), var(--btn-gradient-end);
       margin-top: 15px;
+    }
+
+    @media (--mid-tablet) {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
     }
   }
 }
